@@ -9,26 +9,28 @@
 
 </head>
 
-<header class="inicio">
+<header class="inicio" id="inicio">
 
     <nav class="inicio__nav">
-        <a href="">INICIO</a>
-        <a href="">BENEFICIOS</a>
-        <a href="">HORARIOS</a>
-        <a href="">CLASES</a>
-        <a href="">PREGUNTAS</a>
-        <a href="">CONTACTO</a>
+        <a href="#inicio" class="inicio__nav__botones">INICIO</a>
+        <a href="#beneficios" class="inicio__nav__botones">BENEFICIOS</a>
+        <a href="#horarios" class="inicio__nav__botones">HORARIOS</a>
+        <a href="#clases" class="inicio__nav__botones">CLASES</a>
+        <a href="#preguntas" class="inicio__nav__botones">PREGUNTAS</a>
+        <a href="#contacto" class="inicio__nav__botones">CONTACTO</a>
     </nav>
 
     <section class="inicio__clases">
         <article class="inicio__dance">
             <div class="inicio__dance__container">
-                <h1>FITNESS DANCE</h1>
-                <h2>¡Combina fuerza y tonificación!</h2>
+                <h1 class="inicio__dance__titulo">FITNESS DANCE</h1>
+                <h2>Baila, quema calorías, ¡y diviértete!</h2>
                 <p>Una clase llena de ritmo y energía donde mejorarás tu coordinación mientras disfrutas de la música.</p>
-        
-                <button class="inicio__cta_principal">Ver más</button>
-                <button class="inicio__cta_secundario">Ver horarios</button>
+                <aside class="inicio__cta__container">
+                    <button class="inicio__cta_principal">Ver más</button>
+                    <button class="inicio__cta_secundario">Ver horarios</button>
+                </aside>
+
             </div>
 
             <img src="./img/inicio__dance.png" alt="Clase de fitness dance" class="inicio__fotos">
@@ -36,12 +38,13 @@
     
         <article class="inicio__combat">
             <div class="inicio__combat__container">
-                <h1>FITNESS COMBAT + GAP</h1>
+                <h1 class="inicio__combat__titulo">FITNESS COMBAT + GAP</h1>
                 <h2>¡Combina fuerza y tonificación!</h2>
                 <p>Mejora tu resistencia con ejercicios de combate mientras tonificas glúteos, abdomen y piernas.</p>
-        
-                <button class="inicio__cta_principal">Ver más</button>
-                <button class="inicio__cta_secundario">Ver horarios</button>
+                <aside class="inicio__cta__container">
+                    <button class="inicio__cta_principal">Ver más</button>
+                    <button class="inicio__cta_secundario">Ver horarios</button>
+                </aside>
             </div>
             
             <img src="./img/inicio__combat.png" alt="Clase de fitness combat + GAP" class="inicio__fotos">
