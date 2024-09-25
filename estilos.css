@@ -20,7 +20,28 @@ h2{
     text-align: center;
 }
 
+p{
+    font-family: 'Lato';
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 /* NAV */
+
+.inicio_logo_bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 80%; /* Adjust to your desired width */
+    height: auto;   /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image */
+    
+
+}
 
 .inicio__nav{
     height: 80px;
@@ -41,14 +62,13 @@ h2{
 .inicio{
     height: 100vh;
     width: 100%;
-    overflow-x: hidden;
 }
 
 .inicio__clases{
     display: flex;
-    height: 100%;
     text-align: center;
     justify-content: center;
+    height: calc(100% - 80px);
 }
 
 /* INICIO DANCE */
@@ -57,12 +77,14 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .inicio__dance__container{
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 70%;
 }
 
 .inicio__dance__titulo{
@@ -75,6 +97,7 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -82,17 +105,52 @@ h2{
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 70%;
 }
 
 .inicio__combat__titulo{
     color: #B42E39;
 }
 
+/* INICIO CTAs y Fotos */
+
 .inicio__cta__container{
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: auto;
     gap: 20px;
+}
+
+.inicio__cta__container button{
+
+    border-radius: 32px;
+    font-size: 1.5rem;
+    padding: 8px 32px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+.inicio__cta_principal{
+    background-color: #F43614;
+    color: #f5f4f4;
+    transition: background-color .3s;
+}
+
+.inicio__cta_principal:hover{
+    background-color: #F9665E;
+
+}
+
+.inicio__cta_secundario{
+    outline : 4px solid #F43614;
+    background-color: transparent;
+    color: #F43614;
+    transition: all .6s;
+}
+
+.inicio__cta_secundario:hover{
+    outline : 4px solid #F9665E;
+    color: #F9665E;
 }
 
 .inicio__fotos{
