@@ -8,9 +8,8 @@ body{
 
 h1{
     font-family: 'montserrat';
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
-    font-weight: bold;
     margin: 0;
     height: 150px;
     width: 100%;
@@ -46,8 +45,6 @@ p{
     height: auto;
     display: block;
     margin: 0 auto;
-    
-
 }
 
 .inicio__nav{
@@ -76,6 +73,15 @@ p{
     text-align: center;
     justify-content: center;
     height: calc(100% - 80px);
+}
+
+.inicio__entrenadora{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    translate: -50% 0;
+    height: 80%;
+    filter: drop-shadow(0 -10px 20px #2323238e);
 }
 
 /* INICIO DANCE */
@@ -163,4 +169,45 @@ p{
 .inicio__fotos{
 
     width: 100%;
+}
+
+/* BENEFICIOS */
+
+.beneficios{
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    margin: 0 auto;
+    gap: 10%;
+}
+
+.beneficios__container{
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+}
+
+.beneficios h1{
+    font-size: 4rem;
+}
+
+.beneficios__combat{
+    color: #B42E39;
+}
+
+.beneficios__subtitulo{
+    font-size: 2rem;
+    font-family: "montserrat";
+}
+
+.beneficios__lista {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.beneficios__lista__punto{
+    margin: 10px 0;
+    list-style: none;
+    list-style-image: url("./img/estilos_lista.svg");
 }
