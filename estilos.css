@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -60,6 +64,30 @@ p{
 .inicio__nav__botones{
     text-decoration: none;
     font-family: 'lato';
+    font-weight: bold;
+    color: #F43614;
+    position: relative;
+    
+}
+
+.inicio__nav__botones::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #F43614;
+    transition: width .6s ease;
+}
+
+.inicio__nav__botones:hover::after{
+    width: 100%;
+}
+
+.inicio__nav__botones .active {
+    background-color: #f5f4f4; /* Cambia los colores según tu diseño */
+    color: #233D56;
     font-weight: bold;
 }
 
@@ -143,14 +171,15 @@ p{
     gap: 20px;
 }
 
-.inicio__cta__container button{
-
+.inicio__cta__container a{
+    font-family: "Lato";
     border-radius: 32px;
     font-size: 1.5rem;
     padding: 8px 32px;
     font-weight: bold;
     cursor: pointer;
     border: none;
+    text-decoration: none;
 }
 .inicio__cta_principal{
     background-color: #F43614;
@@ -362,10 +391,7 @@ p{
     transition: background-color 1s ease;
 }
 
-.contacto__cta:first-child:hover{
+.contacto__cta:hover{
     background-color: #232323;
 }
 
-.contacto__cta:last-child:hover{
-    background-color: #CC1313;
-}
