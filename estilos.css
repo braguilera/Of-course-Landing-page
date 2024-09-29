@@ -19,11 +19,12 @@ h1{
     justify-content: center;
 }
 
-h2{
-    font-family: 'montserrat';
-    font-size: 1.5rem;
+h2 {
     text-align: center;
-    margin: 0;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #232323;
+    font-family: "Montserrat";
 }
 
 p{
@@ -102,6 +103,13 @@ p{
 
 .inicio__dance__titulo{
     color: #44535B;
+}
+
+.inicio__clases h2{
+    font-family: 'montserrat';
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
 }
 
 /* INICIO COMBAT */
@@ -226,14 +234,6 @@ p{
     margin: 0 auto;
 }
 
-.horarios-container h2 {
-    text-align: center;
-    font-size: 4rem;
-    margin-bottom: 20px;
-    color: #232323;
-
-}
-
 .horarios-grid {
     border: 2px solid #232323;
     display: grid;
@@ -274,4 +274,58 @@ p{
 
 .empty {
     background-color: transparent;
+}
+
+/* NUESTRAS CLASES */
+.nuestras-clases {
+    margin-bottom: 50px;
+}
+
+.clases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.clase-item {
+    background-color: #d3d3d3;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #333;
+    border-radius: 10px;
+}
+
+/* PREGUNTAS FRECUENTES */
+.faq__container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    padding: 15px 20px;
+    border-radius: 16px;
+    margin-bottom: 5%;
+    border: 2px solid #232323;
+}
+
+.faq-item p {
+    margin: 0;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.faq-item li{
+    font-family: "Lato";
+    font-size: 1.1rem;
+}
+
+.faq-item p strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
 }
