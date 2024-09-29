@@ -211,3 +211,67 @@ p{
     list-style: none;
     list-style-image: url("./img/estilos_lista.svg");
 }
+
+/* HORARIOS */
+
+.horarios{
+    width: 100%;
+    background-color: #F8F8F8;
+    height: auto;
+    padding: 5% 0;
+}
+
+.horarios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.horarios-container h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #232323;
+
+}
+
+.horarios-grid {
+    border: 2px solid #232323;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.day {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-family: "montserrat";
+}
+
+.class {
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 12px;
+    color: #F8F8F8;
+    font-family: "Lato";
+}
+
+.class strong{
+    font-family: "Montserrat";
+}
+
+.red {
+    background-color: #B42E39;
+}
+
+.grey {
+    background-color: #44535B;
+}
+
+.empty {
+    background-color: transparent;
+}
