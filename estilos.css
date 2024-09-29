@@ -22,6 +22,7 @@ h1{
 h2 {
     text-align: center;
     font-size: 4rem;
+    margin: 0;
     margin-bottom: 20px;
     color: #232323;
     font-family: "Montserrat";
@@ -154,24 +155,22 @@ p{
 .inicio__cta_principal{
     background-color: #F43614;
     color: #f5f4f4;
-    transition: background-color .3s;
+    transition: background-color .6s;
 }
 
 .inicio__cta_principal:hover{
-    background-color: #F9665E;
+    background-color: #232323;
 
 }
 
 .inicio__cta_secundario{
-    outline : 4px solid #F43614;
     background-color: transparent;
     color: #F43614;
-    transition: all .6s;
+    transition: color .6s;
 }
 
 .inicio__cta_secundario:hover{
-    outline : 4px solid #F9665E;
-    color: #F9665E;
+    color: #232323;
 }
 
 .inicio__fotos{
@@ -183,16 +182,15 @@ p{
 
 .beneficios{
     max-width: 1200px;
-    height: 100vh;
     display: flex;
     margin: 0 auto;
     gap: 10%;
+    padding: 4% 0;
 }
 
 .beneficios__container{
     width: 100%;
     height: 100%;
-    padding-top: 5%;
 }
 
 .beneficios h1{
@@ -278,7 +276,8 @@ p{
 
 /* NUESTRAS CLASES */
 .nuestras-clases {
-    margin-bottom: 50px;
+    width: 100%;
+    padding: 4% 0;
 }
 
 .clases-grid {
@@ -301,6 +300,11 @@ p{
 }
 
 /* PREGUNTAS FRECUENTES */
+.faq{
+    width: 100%;
+    padding: 4% 0;
+}
+
 .faq__container{
     max-width: 800px;
     margin: 0 auto;
@@ -328,4 +332,40 @@ p{
     display: block;
     margin-bottom: 10px;
     font-size: 1.3rem;
+}
+
+/* CONTACTO */
+
+.contacto{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: #F8F8F8;
+    padding: 4% 0;
+}
+
+.contacto__botones{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contacto__cta{
+    background-color: #FF1616;
+    color: #F8F8F8;
+    font-size: 1.3rem;
+    font-family: "Montserrat";
+    padding: 8px 20px;
+    border-radius: 100vmax;
+    text-decoration: none;
+    transition: background-color 1s ease;
+}
+
+.contacto__cta:first-child:hover{
+    background-color: #232323;
+}
+
+.contacto__cta:last-child:hover{
+    background-color: #CC1313;
 }
