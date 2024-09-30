@@ -215,6 +215,11 @@ p{
     margin: 0 auto;
     gap: 10%;
     padding: 4% 0;
+    flex-direction: column;
+}
+
+.beneficios__container__principal{
+    display: flex;
 }
 
 .beneficios__container{
@@ -233,6 +238,7 @@ p{
 .beneficios__subtitulo{
     font-size: 2rem;
     font-family: "montserrat";
+    text-align: center;
 }
 
 .beneficios__lista {
@@ -385,6 +391,8 @@ p{
     color: #F8F8F8;
     font-size: 1.3rem;
     font-family: "Montserrat";
+    text-align: center;
+    margin: 0 4%;
     padding: 8px 20px;
     border-radius: 100vmax;
     text-decoration: none;
@@ -394,4 +402,206 @@ p{
 .contacto__cta:hover{
     background-color: #232323;
 }
+
+.contacto__copy{
+    text-align: center;
+    margin: 4% 4%;
+    font-family: "Montserrat";
+}
+
+/* MEDIA QUERYS */
+
+@media (max-width: 1080px){
+
+    .class{
+        font-size: .8rem;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 1.8rem;
+        height: 140px;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .inicio__nav {
+        gap: 3%;
+    }
+
+    .inicio_logo_bg{
+        max-width:100%;
+        top: 10%;
+    }
+
+    .inicio__entrenadora {
+        height: 60%;
+    }
+
+    .inicio__cta__container a {
+        font-size: 1.4rem;
+        padding: 8px 28px;
+    }
+
+    .beneficios {
+        gap: 5%;
+        padding: 0 4%;
+    }
+
+    .beneficios h1{
+        font-size: 2.5rem;
+    }
+
+    .beneficios__subtitulo {
+        font-size: 1.8rem;
+    }
+
+    .beneficios__lista {
+        font-size: 1.4rem;
+    }
+
+    .horarios-container{
+        padding: 0 4%;
+    }
+
+    .clase-item {
+        height: 120px;
+        font-size: 1.3rem;
+    }
+
+    .contacto__cta {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .inicio{
+        padding-bottom: 14%;
+        height: auto;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+    
+    .inicio__cta__container a{
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+    .inicio__fotos{
+        display: none;
+    }
+
+    .beneficios__subtitulo{
+        font-size: 1.4rem;
+
+    }
+
+    .beneficios__lista__punto{
+        font-size: 1.2rem;
+    }
+
+}
+
+/* Pantallas pequeñas (celulares en modo vertical) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+        height: 120px;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .inicio__nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .inicio__nav__botones {
+        font-size: 1rem;
+    }
+
+    .inicio__entrenadora {
+        height: 50%;
+    }
+
+    .inicio__cta__container a {
+        font-size: 1.2rem;
+        padding: 6px 24px;
+    }
+
+    .beneficios {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .beneficios h1 {
+        font-size: 3rem;
+    }
+
+    .beneficios__subtitulo {
+        font-size: 1.5rem;
+    }
+
+    .beneficios__lista {
+        font-size: 1.2rem;
+    }
+
+    .horarios-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .clases-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    .clase-item {
+        height: 100px;
+        font-size: 1.2rem;
+    }
+
+    .faq__container {
+        padding: 2%;
+    }
+
+    .contacto__botones {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contacto__cta {
+        font-size: 1rem;
+        padding: 6px 16px;
+    }
+}
+
+@media (max-width: 500px){
+
+    .inicio__clases{
+        flex-direction: column;
+    }
+
+    .beneficios__container__principal{
+        flex-direction: column;
+    }
+
+    .beneficios__titulo{
+        font-size: 2rem;
+    }
+
+}
+
 
