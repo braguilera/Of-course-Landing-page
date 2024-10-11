@@ -86,7 +86,7 @@ p{
 }
 
 .inicio__nav__botones .active {
-    background-color: #f5f4f4; /* Cambia los colores según tu diseño */
+    background-color: #f5f4f4;
     color: #233D56;
     font-weight: bold;
 }
@@ -251,7 +251,7 @@ p{
 .beneficios__lista__punto{
     margin: 10px 0;
     list-style: none;
-    list-style-image: url("./img/estilos_lista.svg");
+    list-style-image: url("./img/iconos/estilos_lista.svg");
 }
 /* HORARIOS */
 .horarios {
