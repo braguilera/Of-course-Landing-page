@@ -210,7 +210,7 @@ p{
 /* BENEFICIOS */
 
 .beneficios{
-    max-width: 1200px;
+    max-width: 1500px;
     display: flex;
     margin: 0 auto;
     gap: 10%;
@@ -220,6 +220,7 @@ p{
 
 .beneficios__container__principal{
     display: flex;
+    gap: 50px;
 }
 
 .beneficios__container{
@@ -252,10 +253,8 @@ p{
     list-style: none;
     list-style-image: url("./img/estilos_lista.svg");
 }
-
 /* HORARIOS */
-
-.horarios{
+.horarios {
     width: 100%;
     background-color: #F8F8F8;
     height: auto;
@@ -268,12 +267,20 @@ p{
 }
 
 .horarios-grid {
-    border: 2px solid #232323;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 15px;
+    border: 2px solid #232323;
     border-radius: 15px;
     padding: 20px;
+    margin: 10px;
+    grid-template-areas: 
+        "lunes martes miercoles jueves viernes sabado"
+        "CG-9hs-lunes . CG-9hs-miercoles . CG-9hs-viernes ."
+        "CG-13hs-lunes . CG-13hs-miercoles . CG-13hs-viernes ."
+        ". . . . . FD-16hs-sabado"
+        "CG-18hs-lunes . CG-18hs-miercoles CG-18hs-jueves . ."
+        ". FD-18hs-martes . . . CG-18hs-sabado";
 }
 
 .day {
@@ -281,7 +288,7 @@ p{
     text-align: center;
     padding: 10px 0;
     font-size: 1.2rem;
-    font-family: "montserrat";
+    font-family: "Montserrat";
 }
 
 .class {
@@ -293,10 +300,6 @@ p{
     font-family: "Lato";
 }
 
-.class strong{
-    font-family: "Montserrat";
-}
-
 .red {
     background-color: #B42E39;
 }
@@ -305,34 +308,34 @@ p{
     background-color: #44535B;
 }
 
-.empty {
-    background-color: transparent;
-}
+/* Asignación de áreas de grid para días */
+#lunes { grid-area: lunes; }
+#martes { grid-area: martes; }
+#miercoles { grid-area: miercoles; }
+#jueves { grid-area: jueves; }
+#viernes { grid-area: viernes; }
+#sabado { grid-area: sabado; }
 
-/* NUESTRAS CLASES */
-.nuestras-clases {
-    width: 100%;
-    padding: 4% 0;
-}
+/* Asignación de áreas de grid para horarios */
+#CG-9hs-lunes { grid-area: CG-9hs-lunes; }
+#CG-9hs-miercoles { grid-area: CG-9hs-miercoles; }
+#CG-9hs-viernes { grid-area: CG-9hs-viernes; }
 
-.clases-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
+#CG-13hs-lunes { grid-area: CG-13hs-lunes; }
+#CG-13hs-miercoles { grid-area: CG-13hs-miercoles; }
+#CG-13hs-viernes { grid-area: CG-13hs-viernes; }
 
-.clase-item {
-    background-color: #d3d3d3;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: #333;
-    border-radius: 10px;
-}
+#FD-16hs-sabado { grid-area: FD-16hs-sabado; }
+
+#CG-18hs-lunes { grid-area: CG-18hs-lunes; }
+#CG-18hs-miercoles { grid-area: CG-18hs-miercoles; }
+#CG-18hs-jueves { grid-area: CG-18hs-jueves; }
+
+#FD-18hs-martes { grid-area: FD-18hs-martes; }
+#CG-18hs-sabado { grid-area: CG-18hs-sabado; }
+
+
+
 
 /* PREGUNTAS FRECUENTES */
 .faq{
@@ -513,6 +516,32 @@ p{
 
 }
 
+/* Responsive design para móviles */
+@media screen and (max-width: 768px) {
+    .horarios-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "lunes"
+            "CG-9hs-lunes"
+            "CG-13hs-lunes"
+            "CG-18hs-lunes"
+            "martes"
+            "FD-18hs-martes"
+            "miercoles"
+            "CG-9hs-miercoles"
+            "CG-13hs-miercoles"
+            "CG-18hs-miercoles"
+            "jueves"
+            "CG-18hs-jueves"
+            "viernes"
+            "CG-9hs-viernes"
+            "CG-13hs-viernes"
+            "sabado"
+            "FD-16hs-sabado"
+            "CG-18hs-sabado";
+    }
+}
+
 /* Pantallas pequeñas (celulares en modo vertical) */
 @media (max-width: 600px) {
     h1 {
@@ -559,15 +588,6 @@ p{
         font-size: 1.2rem;
     }
 
-    .horarios-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .clases-grid {
-        grid-template-columns: 1fr;
-        grid-gap: 15px;
-    }
-
     .clase-item {
         height: 100px;
         font-size: 1.2rem;
@@ -594,6 +614,12 @@ p{
         flex-direction: column;
     }
 
+    .inicio_logo_bg {
+        max-width: 250%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .beneficios__container__principal{
         flex-direction: column;
     }
@@ -603,5 +629,14 @@ p{
     }
 
 }
+
+@media (max-width: 350px){
+
+    .inicio_logo_bg {
+        max-width: 350%;
+    }
+
+}
+
 
 
