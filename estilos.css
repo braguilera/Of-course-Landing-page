@@ -91,6 +91,14 @@ p{
     font-weight: bold;
 }
 
+.inicio__menu img{
+    position: absolute;
+    top: 17px;
+    right: 6%;
+    display: none;
+    cursor: pointer;
+}
+
 /* INICIO */
 
 .inicio{
@@ -553,14 +561,50 @@ p{
         font-size: 2.5rem;
     }
 
-    .inicio__nav {
+    .inicio{
+        padding-top: 80px;
+    }
+
+    .inicio__nav{
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 30px;
+        height: 100%;
+        background-color: #232323;
         flex-direction: column;
         gap: 10px;
+        justify-content: space-evenly;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 1s ease;
+    }
+
+    .inicio__nav.activo{
+        transform: translateX(0);
+
     }
 
     .inicio__nav__botones {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
+
+    #boton_menu{
+        display: block;
+    }
+
+    #boton_salir{
+        display: block;
+        z-index: 2;
+        transform: translateX(400%);
+        transition: transform 1s ease;
+    }
+
+    #boton_salir.activo{
+        transform: translateX(0)
+    }
+
 
     .inicio__entrenadora {
         height: 50%;
