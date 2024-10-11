@@ -136,6 +136,8 @@ p{
     align-items: center;
     flex-direction: column;
     width: 80%;
+    height: 500px;
+    justify-content: flex-start;
 }
 
 .inicio__dance__titulo{
@@ -163,7 +165,9 @@ p{
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
+    height: 500px;
+    justify-content: flex-start;
 }
 
 .inicio__combat__titulo{
@@ -295,7 +299,7 @@ p{
     font-weight: bold;
     text-align: center;
     padding: 10px 0;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     font-family: "Montserrat";
 }
 
@@ -354,6 +358,7 @@ p{
 .faq__container{
     max-width: 800px;
     margin: 0 auto;
+    padding: 30px;
 }
 
 .faq-item {
@@ -422,10 +427,14 @@ p{
 
 /* MEDIA QUERYS */
 
-@media (max-width: 1080px){
+@media (max-width: 1100px){
+
+    .beneficios h1{
+        font-size: 3rem;
+    }
 
     .class{
-        font-size: .8rem;
+        font-size: 1rem;
     }
 
 }
@@ -478,6 +487,15 @@ p{
     .horarios-container{
         padding: 0 4%;
     }
+    
+    
+    .day{
+        font-size: 1.2rem;
+    }
+
+    .class{
+        font-size: .8rem;
+    }
 
     .clase-item {
         height: 120px;
@@ -525,7 +543,7 @@ p{
 }
 
 /* Responsive design para móviles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .horarios-grid {
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -548,6 +566,14 @@ p{
             "FD-16hs-sabado"
             "CG-18hs-sabado";
     }
+
+    .day{
+        font-size: 2rem;
+    }
+
+    .class{
+        font-size: 1.2rem;
+    }
 }
 
 /* Pantallas pequeñas (celulares en modo vertical) */
@@ -567,7 +593,7 @@ p{
 
     .inicio__nav{
         z-index: 2;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         padding: 30px;
@@ -592,9 +618,14 @@ p{
 
     #boton_menu{
         display: block;
+        position: fixed;
+        padding: 4px;
+        background-color: #232323c9;
+        border-radius: 32px;
     }
 
     #boton_salir{
+        position: fixed;
         display: block;
         z-index: 2;
         transform: translateX(400%);
